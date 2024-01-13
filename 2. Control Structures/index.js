@@ -63,7 +63,7 @@ while(index < list.length){
     index++
 }
 
-// Checkpoint 2.3 How would you simulate a do-while loop in JavaScript
+// Checkpoint 2.3 What is the difference between do while and while loop?
 // Answer: 
 
 // TODO 2.7 Use a for of loop to display all the values in the list
@@ -101,5 +101,4 @@ try{
 }finally{
     console.log("cleaning up resources");
 }
-
 
