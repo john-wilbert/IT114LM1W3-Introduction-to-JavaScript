@@ -10,9 +10,7 @@ const randomNumber = Math.floor((Math.random() * 100) + 1); // feel free to mock
 if (randomNumber > 50) {
     console.log("more than fifty")
 }
-else {
-    console.log("less than fifty")
-}
+
 // TODO 2.2 Display whether the random number is odd or even
 // Your code here
 if (randomNumber % 2 == 0) {
@@ -43,12 +41,13 @@ let toDisplay = randomNumber % 2 == 0 ? "Even" : "Odd"
 console.log("toDisplay", toDisplay);
 
 // Checkpoint 2.1 How do you use switch statements and when would you use them? Try researching the answer
-// Answer: 
+// Answer: switch statement is mostly used in decision making, it evaluates an expression and executes a block of code 
+// based on the value of the expression
 
 // TODO 2.5 Use a for loop to print the numbers 1 to N
 const n = 10
 // Your code here
-for(let i = 1; i <= n; i++){
+for (let i = 1; i <= n; i++) {
     console.log(i)
 }
 
@@ -58,24 +57,26 @@ const list = ["apple", "banana", "cherry", "date", "elderberry"];
 // Your code here
 console.log("While Loop: ");
 let index = 0
-while(index < list.length){
+while (index < list.length) {
     console.log(list[index]);
     index++
 }
 
 // Checkpoint 2.3 What is the difference between do while and while loop?
 // Answer: 
+// do while: checks the condition at the end of the loop structure in this loop. A code block will run once if the condition is not true.
+// while: checks the condition at the start of the loop structure. A code block will run until the condition is true, loop ends if false.
 
 // TODO 2.7 Use a for of loop to display all the values in the list
 // Your code here
 console.log("For Of:");
-for(const i of list){
-    console.log(i)
+for (const item of list) {
+    console.log(item)
 }
 // TODO 2.8 Use a for in loop to display all the values in the list
 // Your code here
 console.log("For In:");
-for(const i in list){
+for (const i in list) {
     console.log(list[i])
 }
 
@@ -85,20 +86,24 @@ console.log("For Each:")
 list.forEach((element) => console.log(element))
 // Checkpoint 2.2 When should you use for of, for in, or .forEach loops? Try researching the answer
 // Answer: 
+// for of: used for iterable objects (arrays, strings, maps, sets, etc.)
+// for in: used  for iterating over object properties (not ideal with arrays)
+// .forEach: used for iterating over array elements when you want a concise and expressive syntax
 
 // TODO 2.10 Use the try and catch block to catch division by zero errors in the code below.
 // In the finally block, simulate cleaning up resources by displaying "cleaning up resources"
-console.log("Try Catch");
+console.log("Try Catch:");
 const numerator = Math.floor((Math.random() * 100) + 1);
 const denominator = Math.floor((Math.random() * 5)); // feel free to mock this value for testing
-try{
+try {
     const quotient = numerator / denominator;
-    if(denominator == 0){
-        throw Error("Division by zero error")
+    if (denominator == 0) {
+        throw new Error("Division by zero error")
     }
-}catch(error){
-    console.log("ERROR");
-}finally{
+    console.log("Quotient:", quotient);
+} catch (error) {
+    console.log("ERROR:", error.message);
+} finally {
     console.log("cleaning up resources");
 }
 
