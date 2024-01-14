@@ -14,16 +14,32 @@ let numbers = [
 
 // Todo 3.1 Get the first, 5th, and last items in the numbers array.
 // Your code here
-console.log(numbers[0], numbers[4], numbers[numbers.length-1]);
+console.log("First Item: " + numbers[0], "Fifth Item: " + numbers[4], "Last Item: " + numbers[numbers.length - 1]);
+
 // Todo 3.2 calculate the min, max, and the average of the numbers array
 // Your code here
+const min = Math.min(...numbers)
+const max = Math.max(...numbers)
 
+let sum = 0
+for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i]
+}
+const ave = sum / numbers.length
+
+console.log("Min: " + min, "Max: " + max, "Average: " + ave)
 // Checkpoint 3.1 How would you compare lists in python vs arrays in JavaScript
-// Answer: 
+// Answer:
+// Python lists provide built-in functions like sum(), min(), and max() while JavaScript arrays use array methods or functions from other libraries
 
 // Todo 3.3 Declare an object with information about IT114L (course code, name, units, number of students)
 // Your code here
-
+const IT114L = {
+    courseCode: "IT114L",
+    name:"Web Systems and Technologies (Laboratory)",
+    units: 3,
+    numberOfStudents: 40
+}
 // Todo 3.4 Add professor name as one of the fields of the object. Display the value of professor name.
 // Your code here
 
@@ -34,7 +50,7 @@ console.log(numbers[0], numbers[4], numbers[numbers.length-1]);
 // Your code here
 
 // Checkpoint 3.2 What would be the equivalent of objects in python? How would you compare them?
-// Answer: 
+// Answer:
 
 // Todo 3.6 Going back to the array of numbers, use the spread syntax to create a copy of the array with an additional number
 // Your code here
