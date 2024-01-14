@@ -57,22 +57,27 @@ console.log(mystring)
 const a = 5
 const b = -2
 console.log(a > 0 && b > 0) // Logical AND (&&)
-
-const c = 3
-const d = -2
-console.log(c > 0 || d > 0) // Logical OR (||)
+console.log(a > 0 || b > 0) // Logical OR (||)
+console.log(!(a > 0 || b > 0)) // Logical NOT (!)
 
 // Checkpoint 1.4 What operators did you use?
 // Answer: 
-// Logical AND (&&) and Logical OR (||)
+// Logical AND (&&), Logical OR (||), Logical NOT (!)
 
 
 // TODO 1.7 Try out the different relational operators
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#relational_operators
-const color = ["blue", "red", "yellow"]
-const g = 1 in color //returns true
-console.log(g)
+let e = 10
+let f = 20
+
+console.log("Greater than", e > f)
+console.log("Less than", e < f)
+console.log("Not equal to", e != f)
+console.log("Equal to", e == f)
+
 // Checkpoint 1.5 What does [] == false evaluate to? Why does that happen? Research why
 // Answer: 
+// Using the "==" operator leads to the execution of type coercion which considers the empty array [] as true which makes the
+// comparison as true == false. To avoid this, the usage of "===" for equality comparisons is better to avoid confusion.
 // Your code here
 console.log([] == false)
